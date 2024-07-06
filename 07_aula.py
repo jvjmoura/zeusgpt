@@ -5,6 +5,11 @@ import time
 import streamlit as st
 from streamlit_webrtc import WebRtcMode, webrtc_streamer
 
+headers = {
+"authorization": st.secrets["auth_token"],
+"content-type": "application/json"
+}
+
 import openai
 import pydub
 from moviepy.editor import VideoFileClip
